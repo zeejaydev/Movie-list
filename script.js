@@ -42,7 +42,7 @@ const addMovie = ()=>{
     }else{
         text.classList.add('hide')
         
-        fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=cc340213&t=${inputVal}`)
+        fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=cc340213&t=${inputVal}`)
         .then( resp => resp.json() )
         .then( results => {
             //creating the poster element
