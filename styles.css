@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,li{
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAF7F2;
+}
+.container{
+    max-width: 60%;
+    margin: 20px auto;
+}
+.title{
+    text-align: center;
+    font-size: 1.5rem;
+}
+input{
+    min-width: 100%;
+    padding: 5px 8px;
+    margin: 10px 0;
+}
+.text, .loading{
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.floating-btn{
+    height: 50px;
+    width: 50px;
+    background-color: #FF4133;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 70px;
+    bottom: 50px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+.list{
+    margin-top: 20px;
+    position: relative;
+    background-color: #fff;
+    height: 170px;
+    display: flex;
+    gap: 20px;
+    /* border: 1px solid black; */
+}
+.poster{
+    width: 100px;
+    height: 150px;
+    /* border: 1px solid black; */
+    margin-left: 20px;
+    margin-top: -10px;
+    position: relative;
+}
+img{
+    width: 100%;
+}
+.movie-info{
+    height: 140px;
+    min-width: 50%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-size: small;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+/*buttons and buttons container styles*/
+.buttons-conatiner{
+    display: flex;
+    gap: 20px;
+}
+.fa-trash{
+    color: white;
+}
+.watched-btn{
+    background-color: #9C948A;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+.del-btn{
+    background-color: #FF4133;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20%;
+    cursor: pointer;
+}
+.watched-btn:hover{
+    background-color: #797269;
+}
+@media only screen and (max-width: 600px)  {
+    .container{
+        min-width: 100%;
+    }
+    .floating-btn{
+        height: 40PX;
+        width: 40PX;
+        right: 20PX;
+    }
+}
