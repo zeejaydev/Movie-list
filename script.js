@@ -115,6 +115,13 @@ const addMovie = ()=>{
 button.addEventListener('click', addMovie)
 
 const deleteMovie = (event)=>{
+
     //getting offsetParent to get the main div where the button lives
     event.target.offsetParent.remove()
+
+    //check if all movies are deleted then display text
+    const lists = document.querySelectorAll('.list')
+    if(lists.length === 0){
+        text.classList.remove('hide')
+    }
 }
