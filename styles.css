@@ -24,13 +24,15 @@ input{
     min-width: 100%;
     padding: 5px 8px;
     margin: 10px 0;
+    font-size: 16px;
 }
-.text, .loading{
+.text{
     min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .floating-btn{
     height: 50px;
@@ -81,13 +83,13 @@ img{
 h2{
     font-family: 'Roboto', sans-serif;
     font-size: medium;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     text-transform: capitalize;
 }
 h3{
     font-family: 'Roboto', sans-serif;
     font-size: small;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     text-transform: capitalize;
     font-weight: 300;
 }
@@ -120,9 +122,16 @@ h3{
 .watched-btn:hover{
     background-color: #797269;
 }
+/* star container */
+.star-container{
+    margin-bottom: 8px;
+}
+.fa-star,.fa-star-half-stroke{
+    color: #D3BCA2;
+}
 @media only screen and (max-width: 600px)  {
     .container{
-        min-width: 100%;
+        max-width: 90%;
     }
     .floating-btn{
         height: 40PX;
