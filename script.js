@@ -132,10 +132,16 @@ const deleteMovie = (event)=>{
 
 const watchedBt = (e)=>{
     console.log(e)
+    
     const buttonsCon = e.target.parentElement
     const checkIcon = document.createElement('i')
     checkIcon.className = 'fa-solid'
     checkIcon.classList.add('fa-check')
-
+    const lastItem = e.target.parentElement.lastChild.className === "del-btn"
+    if(lastItem){
     buttonsCon.appendChild(checkIcon)
-}
+    }else{
+        console.log('checked')
+    }
+    
+}   
