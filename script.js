@@ -100,9 +100,13 @@ const addMovie = ()=>{
 
                 //selecting all delete buttons to start listening to clicks
                 const deleteBtns = document.querySelectorAll('.del-btn')
+                
                 //adding an event listener on each button
                 deleteBtns.forEach( btn => btn.addEventListener('click',deleteMovie))
                 
+
+                const watchedBtns = document.querySelectorAll('.watched-btn')
+                watchedBtns.forEach( btn => btn.addEventListener('click',watchedBt))
             }
         })
         .catch(e=>console.log(e))
@@ -124,4 +128,14 @@ const deleteMovie = (event)=>{
     if(lists.length === 0){
         text.classList.remove('hide')
     }
+}
+
+const watchedBt = (e)=>{
+    console.log(e)
+    const buttonsCon = e.target.parentElement
+    const checkIcon = document.createElement('i')
+    checkIcon.className = 'fa-solid'
+    checkIcon.classList.add('fa-check')
+
+    buttonsCon.appendChild(checkIcon)
 }
