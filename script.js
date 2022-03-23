@@ -131,7 +131,6 @@ const deleteMovie = (event)=>{
 }
 
 const watchedBt = (e)=>{
-    console.log(e)
     
     const buttonsCon = e.target.parentElement
     const checkIcon = document.createElement('i')
