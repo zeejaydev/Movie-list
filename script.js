@@ -1,5 +1,5 @@
 const button = document.getElementById('floating-btn')
-
+const input = document.querySelector('input')
 const addMovie = ()=>{
     //getting elements from the dom
     const inputVal = document.querySelector('input').value
@@ -101,10 +101,10 @@ const addMovie = ()=>{
                 //selecting all delete buttons to start listening to clicks
                 const deleteBtns = document.querySelectorAll('.del-btn')
                 
-                //adding an event listener on each button
+                //adding an event listener on each delete button
                 deleteBtns.forEach( btn => btn.addEventListener('click',deleteMovie))
                 
-
+                //adding an event listener on each watched button
                 const watchedBtns = document.querySelectorAll('.watched-btn')
                 watchedBtns.forEach( btn => btn.addEventListener('click',watchedBt))
             }
@@ -117,7 +117,12 @@ const addMovie = ()=>{
 }
 //listing to clicks on the floating button
 button.addEventListener('click', addMovie)
-
+//listing to enter key press on the input
+input.addEventListener('keypress', (e)=>{
+    if(e.key === 'Enter'){
+        addMovie()
+    }
+} )
 const deleteMovie = (event)=>{
 
     //getting offsetParent to get the main div where the button lives
@@ -131,7 +136,7 @@ const deleteMovie = (event)=>{
 }
 
 const watchedBt = (e)=>{
-    
+
     const buttonsCon = e.target.parentElement
     const checkIcon = document.createElement('i')
     checkIcon.className = 'fa-solid'
